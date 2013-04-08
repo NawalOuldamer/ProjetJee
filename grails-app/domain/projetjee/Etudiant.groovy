@@ -9,5 +9,7 @@ class Etudiant {
 	static constraints = {
 	}
 	
+	
+	
 }
 
