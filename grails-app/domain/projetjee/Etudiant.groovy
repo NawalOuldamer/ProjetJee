@@ -1,12 +1,13 @@
 package projetjee
 
-class Etudiant {
-	String nom
-	String prenom
-	String email
-	String pwd
+class Etudiant extends User{
+	String parcours
 	
+	public String toString(){
+		return "Etudiant [Parcours = "+parcours+"]";
+	}
 	static constraints = {
+		parcours inList:["DL","IHM","IA","CAMSI"]
 	}
 	
 	

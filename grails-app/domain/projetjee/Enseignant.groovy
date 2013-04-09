@@ -1,12 +1,12 @@
 package projetjee
 
-class Enseignant {
-
-	String nom
-	String prenom
-	String email
-	String pwd
+class Enseignant extends User{
+	String departement 
+	public String toString() {
+		return "Enseignant [departement = "+departement+"]";
+	}
 	
 	static constraints = {
+		departement inList:["Informatique","Math","Physique","Bio","Chimie"]
 	}
 }
