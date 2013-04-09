@@ -8,11 +8,12 @@ class BootStrap {
 			nom:"senhaji",
 			prenom:"ismail",
 			mail:"senhaji@hot.fr",
-			pwd="123",
-			role="Etudiant"
+			pwd:"12345678",
+			role:"Etudiant"
 			)
-		ifismail.save(){
-			println "Erreur lors de la création du user ismail"
+		if (!ismail.save()){
+			ismail.errors.allErrors.each{error ->
+			println "Erreur lors de la création du user ismail"}
 		}
     }
     def destroy = {
