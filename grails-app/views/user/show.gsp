@@ -23,20 +23,58 @@
 			</g:if>
 			<ol class="property-list user">
 			
-				<g:if test="${userInstance?.enseignant}">
+				<g:if test="${userInstance?.nom}">
 				<li class="fieldcontain">
-					<span id="enseignant-label" class="property-label"><g:message code="user.enseignant.label" default="Enseignant" /></span>
+					<span id="nom-label" class="property-label"><g:message code="user.nom.label" default="Nom" /></span>
 					
-						<span class="property-value" aria-labelledby="enseignant-label"><g:link controller="enseignant" action="show" id="${userInstance?.enseignant?.id}">${userInstance?.enseignant?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="nom-label"><g:fieldValue bean="${userInstance}" field="nom"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${userInstance?.etudiant}">
+				<g:if test="${userInstance?.prenom}">
 				<li class="fieldcontain">
-					<span id="etudiant-label" class="property-label"><g:message code="user.etudiant.label" default="Etudiant" /></span>
+					<span id="prenom-label" class="property-label"><g:message code="user.prenom.label" default="Prenom" /></span>
 					
-						<span class="property-value" aria-labelledby="etudiant-label"><g:link controller="etudiant" action="show" id="${userInstance?.etudiant?.id}">${userInstance?.etudiant?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="prenom-label"><g:fieldValue bean="${userInstance}" field="prenom"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.pwd}">
+				<li class="fieldcontain">
+					<span id="pwd-label" class="property-label"><g:message code="user.pwd.label" default="Pwd" /></span>
+					
+						<span class="property-value" aria-labelledby="pwd-label"><g:fieldValue bean="${userInstance}" field="pwd"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.role}">
+				<li class="fieldcontain">
+					<span id="role-label" class="property-label"><g:message code="user.role.label" default="Role" /></span>
+					
+						<span class="property-value" aria-labelledby="role-label"><g:fieldValue bean="${userInstance}" field="role"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.mail}">
+				<li class="fieldcontain">
+					<span id="mail-label" class="property-label"><g:message code="user.mail.label" default="Mail" /></span>
+					
+						<span class="property-value" aria-labelledby="mail-label"><g:fieldValue bean="${userInstance}" field="mail"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.cours}">
+				<li class="fieldcontain">
+					<span id="cours-label" class="property-label"><g:message code="user.cours.label" default="Cours" /></span>
+					
+						<g:each in="${userInstance.cours}" var="c">
+						<span class="property-value" aria-labelledby="cours-label"><g:link controller="cours" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>
