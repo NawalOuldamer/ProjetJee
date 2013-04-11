@@ -42,19 +42,3 @@
 	<g:field type="email" name="mail" required="" value="${etudiantInstance?.mail}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: etudiantInstance, field: 'parcours', 'error')} ">
-	<label for="parcours">
-		<g:message code="etudiant.parcours.label" default="Parcours" />
-		
-	</label>
-	<g:select name="parcours" from="${etudiantInstance.constraints.parcours.inList}" value="${etudiantInstance?.parcours}" valueMessagePrefix="etudiant.parcours" noSelection="['': '']"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: etudiantInstance, field: 'cours', 'error')} ">
-	<label for="cours">
-		<g:message code="etudiant.cours.label" default="Cours" />
-		
-	</label>
-	
-</div>
-

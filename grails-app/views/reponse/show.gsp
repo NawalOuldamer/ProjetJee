@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list reponse">
 			
-				<g:if test="${reponseInstance?.note}">
+				<g:if test="${reponseInstance?.contenuReponse}">
 				<li class="fieldcontain">
-					<span id="note-label" class="property-label"><g:message code="reponse.note.label" default="Note" /></span>
+					<span id="contenuReponse-label" class="property-label"><g:message code="reponse.contenuReponse.label" default="Contenu Reponse" /></span>
 					
-						<span class="property-value" aria-labelledby="note-label"><g:fieldValue bean="${reponseInstance}" field="note"/></span>
+						<span class="property-value" aria-labelledby="contenuReponse-label"><g:fieldValue bean="${reponseInstance}" field="contenuReponse"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${reponseInstance?.reponse}">
+				<g:if test="${reponseInstance?.user}">
 				<li class="fieldcontain">
-					<span id="reponse-label" class="property-label"><g:message code="reponse.reponse.label" default="Reponse" /></span>
+					<span id="user-label" class="property-label"><g:message code="reponse.user.label" default="User" /></span>
 					
-						<span class="property-value" aria-labelledby="reponse-label"><g:fieldValue bean="${reponseInstance}" field="reponse"/></span>
+						<span class="property-value" aria-labelledby="user-label"><g:link controller="user" action="show" id="${reponseInstance?.user?.id}">${reponseInstance?.user?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

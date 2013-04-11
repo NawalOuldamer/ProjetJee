@@ -1,13 +1,15 @@
 package projetjee
 
 class User {
+	
 	String nom
 	String prenom
 	String mail
 	String pwd
 	String role
 	
-	static hasMany=[cours:Cours]
+	
+	
 	public String toString() {
 		return "Utilisateur [Nom = "+nom+",Prenom = "+prenom+",Mail = "+mail+" ,Mot de passe = "+pwd+"Role = "+role+"]";
 	}
@@ -20,4 +22,5 @@ class User {
 		mail email:true, blank:false
 		
 		}
-}
+	
+	}

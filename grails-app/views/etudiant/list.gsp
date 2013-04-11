@@ -34,8 +34,6 @@
 					
 						<g:sortableColumn property="mail" title="${message(code: 'etudiant.mail.label', default: 'Mail')}" />
 					
-						<g:sortableColumn property="parcours" title="${message(code: 'etudiant.parcours.label', default: 'Parcours')}" />
-					
 					</tr>
 				</thead>
 				<tbody>
@@ -51,8 +49,6 @@
 						<td>${fieldValue(bean: etudiantInstance, field: "role")}</td>
 					
 						<td>${fieldValue(bean: etudiantInstance, field: "mail")}</td>
-					
-						<td>${fieldValue(bean: etudiantInstance, field: "parcours")}</td>
 					
 					</tr>
 				</g:each>

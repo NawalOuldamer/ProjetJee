@@ -42,11 +42,3 @@
 	<g:field type="email" name="mail" required="" value="${userInstance?.mail}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'cours', 'error')} ">
-	<label for="cours">
-		<g:message code="user.cours.label" default="Cours" />
-		
-	</label>
-	<g:select name="cours" from="${projetjee.Cours.list()}" multiple="multiple" optionKey="id" size="5" value="${userInstance?.cours*.id}" class="many-to-many"/>
-</div>
-

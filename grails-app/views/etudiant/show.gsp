@@ -68,26 +68,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${etudiantInstance?.parcours}">
-				<li class="fieldcontain">
-					<span id="parcours-label" class="property-label"><g:message code="etudiant.parcours.label" default="Parcours" /></span>
-					
-						<span class="property-value" aria-labelledby="parcours-label"><g:fieldValue bean="${etudiantInstance}" field="parcours"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${etudiantInstance?.cours}">
-				<li class="fieldcontain">
-					<span id="cours-label" class="property-label"><g:message code="etudiant.cours.label" default="Cours" /></span>
-					
-						<g:each in="${etudiantInstance.cours}" var="c">
-						<span class="property-value" aria-labelledby="cours-label"><g:link controller="cours" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

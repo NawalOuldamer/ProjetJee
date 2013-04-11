@@ -23,21 +23,39 @@
 			</g:if>
 			<ol class="property-list question">
 			
-				<g:if test="${questionInstance?.question}">
+				<g:if test="${questionInstance?.ennonce}">
 				<li class="fieldcontain">
-					<span id="question-label" class="property-label"><g:message code="question.question.label" default="Question" /></span>
+					<span id="ennonce-label" class="property-label"><g:message code="question.ennonce.label" default="Ennonce" /></span>
 					
-						<span class="property-value" aria-labelledby="question-label"><g:fieldValue bean="${questionInstance}" field="question"/></span>
+						<span class="property-value" aria-labelledby="ennonce-label"><g:fieldValue bean="${questionInstance}" field="ennonce"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${questionInstance?.reponse}">
+				<g:if test="${questionInstance?.dateCreation}">
 				<li class="fieldcontain">
-					<span id="reponse-label" class="property-label"><g:message code="question.reponse.label" default="Reponse" /></span>
+					<span id="dateCreation-label" class="property-label"><g:message code="question.dateCreation.label" default="Date Creation" /></span>
 					
-						<g:each in="${questionInstance.reponse}" var="r">
-						<span class="property-value" aria-labelledby="reponse-label"><g:link controller="reponse" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="dateCreation-label"><g:formatDate date="${questionInstance?.dateCreation}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${questionInstance?.enseignant}">
+				<li class="fieldcontain">
+					<span id="enseignant-label" class="property-label"><g:message code="question.enseignant.label" default="Enseignant" /></span>
+					
+						<span class="property-value" aria-labelledby="enseignant-label"><g:link controller="enseignant" action="show" id="${questionInstance?.enseignant?.id}">${questionInstance?.enseignant?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${questionInstance?.reponses}">
+				<li class="fieldcontain">
+					<span id="reponses-label" class="property-label"><g:message code="question.reponses.label" default="Reponses" /></span>
+					
+						<g:each in="${questionInstance.reponses}" var="r">
+						<span class="property-value" aria-labelledby="reponses-label"><g:link controller="reponse" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></span>
 						</g:each>
 					
 				</li>

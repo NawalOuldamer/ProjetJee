@@ -3,7 +3,7 @@ package projetjee
 import org.springframework.dao.DataIntegrityViolationException
 
 class EnseignantController {
-
+/*
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -99,4 +99,5 @@ class EnseignantController {
             redirect(action: "show", id: id)
         }
     }
+    */
 }

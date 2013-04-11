@@ -68,17 +68,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${userInstance?.cours}">
-				<li class="fieldcontain">
-					<span id="cours-label" class="property-label"><g:message code="user.cours.label" default="Cours" /></span>
-					
-						<g:each in="${userInstance.cours}" var="c">
-						<span class="property-value" aria-labelledby="cours-label"><g:link controller="cours" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">
