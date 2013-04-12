@@ -3,6 +3,8 @@ package projetjee
 
 
 import org.junit.*
+
+import projetjee.profile.Enseignant;
 import grails.test.mixin.*
 
 @TestFor(EnseignantController)

@@ -1,4 +1,4 @@
-import projetjee.User
+import projetjee.profile.User;
 
 class BootStrap {
 

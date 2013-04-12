@@ -1,4 +1,4 @@
-package projetjee
+package projetjee.profile
 import projetjee.question.Question
 
 class Enseignant extends User{

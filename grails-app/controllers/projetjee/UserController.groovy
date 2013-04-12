@@ -2,6 +2,8 @@ package projetjee
 
 import org.springframework.dao.DataIntegrityViolationException
 
+import projetjee.profile.User;
+
 class UserController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]

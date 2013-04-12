@@ -1,4 +1,4 @@
-package projetjee
+package projetjee.profile
 
 import projetjee.reponse.Reponse
 class Etudiant extends User{
