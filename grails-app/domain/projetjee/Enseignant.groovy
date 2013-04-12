@@ -1,4 +1,5 @@
 package projetjee
+import projetjee.question.Question
 
 class Enseignant extends User{
 
