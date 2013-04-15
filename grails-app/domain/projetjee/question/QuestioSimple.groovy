@@ -1,6 +1,6 @@
 package projetjee.question
 
-class QuestioSimple {
+class QuestioSimple extends Question{
 
     static constraints = {
     }

@@ -99,4 +99,17 @@ class EnseignantController {
             redirect(action: "show", id: id)
         }
     }
+	
+	def showHomeEnseignant(Long id){
+		def enseignantInstance = Enseignant.get(id)
+		if (!enseignantInstance) {
+			flash.message = message(code: 'default.not.found.message', args: [message(code: 'enseignant.label', default: 'Enseignant'), id])
+			//redirect(action: "list")
+			render(view:"HomeEnseignant")
+			return
+		}
+
+		[enseignantInstance: enseignantInstance]
+		
+		}
 }

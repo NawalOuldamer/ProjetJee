@@ -1,7 +1,7 @@
 package projetjee.question
 
-class QuestionQcm {
+class QuestionQcm extends Question{
 
-    static constraints = {
-    }
+	static constraints = {
+	}
 }
