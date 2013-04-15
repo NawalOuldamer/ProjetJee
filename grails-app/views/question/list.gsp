@@ -24,11 +24,23 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="contenuQuestion" title="${message(code: 'question.contenuQuestion.label', default: 'Contenu Question')}" />
+					
+						<g:sortableColumn property="dateCreationQuestion" title="${message(code: 'question.dateCreationQuestion.label', default: 'Date Creation Question')}" />
+					
+						<th><g:message code="question.enseignant.label" default="Enseignant" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${questionInstanceList}" status="i" var="questionInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${questionInstance.id}">${fieldValue(bean: questionInstance, field: "contenuQuestion")}</g:link></td>
+					
+						<td><g:formatDate date="${questionInstance.dateCreationQuestion}" /></td>
+					
+						<td>${fieldValue(bean: questionInstance, field: "enseignant")}</td>
 					
 					</tr>
 				</g:each>

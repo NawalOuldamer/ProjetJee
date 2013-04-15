@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<g:form>
-Main page Enseignant !
-</g:form>
+
+<g:link controller="Question" action="create">inscrire ici</g:link> 
 </body>
 </html>

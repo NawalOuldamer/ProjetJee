@@ -68,7 +68,9 @@ class UserController {
 		else{
 			if(userRole=="Enseignant")
 			redirect(controller :"Enseignant" ,action: "showHomeEnseignant", id:userInstance.id)
-			//redirect(controller: "Etudiant", action:"showHomeEtudiant",id :userInstance.id)
+		else{ 
+			redirect(controller: "Etudiant", action:"showHomeEtudiant",id :userInstance.id)
+		}
 			return
 		}
 

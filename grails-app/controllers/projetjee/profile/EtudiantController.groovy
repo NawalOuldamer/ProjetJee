@@ -99,4 +99,18 @@ class EtudiantController {
             redirect(action: "show", id: id)
         }
     }
+	
+	
+	def showHomeEtudiant(Long id){
+		def etudiantInstance = Etudiant.get(id)
+		if (!etudiantInstance) {
+			flash.message = message(code: 'default.not.found.message', args: [message(code: 'etudiant.label', default: 'Etudiant'), id])
+			//redirect(action: "list")
+			render(view:"HomeEtudiant")
+			return
+		}
+
+		[etudiantInstance: etudiantInstance]
+		
+		}
 }

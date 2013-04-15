@@ -23,6 +23,33 @@
 			</g:if>
 			<ol class="property-list question">
 			
+				<g:if test="${questionInstance?.contenuQuestion}">
+				<li class="fieldcontain">
+					<span id="contenuQuestion-label" class="property-label"><g:message code="question.contenuQuestion.label" default="Contenu Question" /></span>
+					
+						<span class="property-value" aria-labelledby="contenuQuestion-label"><g:fieldValue bean="${questionInstance}" field="contenuQuestion"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${questionInstance?.dateCreationQuestion}">
+				<li class="fieldcontain">
+					<span id="dateCreationQuestion-label" class="property-label"><g:message code="question.dateCreationQuestion.label" default="Date Creation Question" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreationQuestion-label"><g:formatDate date="${questionInstance?.dateCreationQuestion}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${questionInstance?.enseignant}">
+				<li class="fieldcontain">
+					<span id="enseignant-label" class="property-label"><g:message code="question.enseignant.label" default="Enseignant" /></span>
+					
+						<span class="property-value" aria-labelledby="enseignant-label"><g:link controller="enseignant" action="show" id="${questionInstance?.enseignant?.id}">${questionInstance?.enseignant?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">
